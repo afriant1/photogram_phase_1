@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photogram</title>
+
+</head>
+<body>
+
+<h1>Photo Details</h1>
+
+<img src="<%= Photo.find_by({ :id => @id }).source %>" width="720">
+
+<p><%= Photo.find_by({ :id => @id }).caption %></p>
+
+<a href="http://localhost:3000/photos/">Back</a>
+<a href="http://localhost:3000/photos/<%= @id %>/edit">Edit</a>
+<a href="http://localhost:3000/delete_photo/<%= @id %>">Delete</a>
+
+
+</body>
+</html>

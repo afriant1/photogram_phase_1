@@ -30,7 +30,7 @@ class PhotosController < ApplicationController
   def destroy
     @id = params["id"]
     Photo.find_by({ :id => @id }).destroy
-    redirect_to "/"
+    redirect_to :back
   end
 
 end
